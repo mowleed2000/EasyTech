@@ -808,8 +808,6 @@ section {
 }
 
 @media (max-width: 768px) {
-    .services-grid { grid-template-columns: 1fr !important; }
-
     .nav-links {
         display: none;
         flex-direction: column;
@@ -851,13 +849,6 @@ section {
     .hero-actions { flex-direction: column; }
     .vapes-teaser-images { flex-direction: column; }
     .vapes-teaser-images img { width: 100%; }
-}
-
-/* Fix Phone Unlocking Hero positioning on Mobile */
-@media (max-width: 768px) {
-    .phone-unlock-hero {
-        background-position: center 25% !important;
-    }
 }
 
 /* Prevent cropping of battery screenshots in hero journey on Mobile */
@@ -908,4 +899,10 @@ section {
         font-size: 0.95rem !important;
         display: block !important;
     }
+}
+
+/* SIM Not Supported Image Fix */
+img[src*="sim not supported"], img[src*="unlock"] {
+    object-fit: contain !important;
+    background-color: #000 !important;
 }
